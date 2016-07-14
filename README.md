@@ -1,6 +1,10 @@
 # ids #
 Solution to Insight Data Science coding challenge 
 
+## Detailed Challenge Summary ## 
+* Use Venmo payments that stream in to build a graph of users and their relationship with one another. 
+* Calculate the median degree of a vertex in a graph and update this each time a new Venmo payment appears. I calculated the median degree across a 60-second sliding window. 
+
 ## Required python packages ##
 Currently the python scripts in `code` require packages pandas, numpy, json and networkx. To install these packages system-wide, invoke 
 * `sudo pip install pandas`
