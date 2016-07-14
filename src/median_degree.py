@@ -28,7 +28,7 @@ def EdgeList(d,i):
     G = nx.from_pandas_dataframe(IntersectDataFrame(d,i), 'actor', 'target', ['created_time'])
     return G.edges()
 
-#Find the Median Degree of an undirected graph. 
+#Find the median degree of an undirected graph. 
 def MedianDegree(d,i): 
     G = nx.from_pandas_dataframe(IntersectDataFrame(d,i), 'actor', 'target', ['created_time'])
     G = sorted(list(G.degree().values()))
