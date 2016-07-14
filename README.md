@@ -14,9 +14,9 @@ If local installation is sufficient or preffered, invoke `pip` with the `--user`
 
 ## Running the file ##
 In terminal `import median_degree` located in the `src` file. 
-* Assign a variable `d` as so: `d = median_degree.parse('../data-gen/venmo-trans.txt')` 
+* Assign a variable `d` so: `d = median_degree.parse('../data-gen/venmo-trans.txt')` 
 * To check TimeStamp please enter: `median_degree.TimeStamp(d,i)` for any `i` that is a natural number. 
-* To check IntersectDataFrame please enter: `median_degree.IntersectDataFram(d,i)` for any `i` that is a natural number. 
+* To check IntersectDataFrame please enter: `median_degree.IntersectDataFrame(d,i)` for any `i` that is a natural number. 
 * To check EdgeList please enter: `median_degree.EdgeList(d,i)` for any `i` that is a natural number. 
 * Finally, to find the MedianDegree please enter: `median_degree.MedianDegree(d,i)` for any `i` that is a natural number
 
