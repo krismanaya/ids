@@ -4,7 +4,7 @@ import pandas as pd
 import networkx as nx 
 import numpy as np
 import sys
-from decimal import * 
+
 
 #Parse Data
 def parse(filename):

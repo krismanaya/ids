@@ -19,6 +19,9 @@ In python `import median_degree` located in the `src` file.
 * To find the MedianDegree please enter: `median_degree.MedianDegree(d)`.
 * Finally, to find the RollingMedianDegree enter: `median_degree.RollingMedianDegree(d)`
 
+## Running my-own-test ## 
+In terminal `cd ids/insight_testsuite/tests/my-own-test`. The please enter `python test.py`. This will show the number of tests that were performed for each function. 
+
 
 
 
