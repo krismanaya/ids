@@ -21,16 +21,20 @@ class Testmedian_degree(unittest.TestCase):
         self.assertEqual(0,norm(len(expected)-len(actual)))
 
     def test_IntersectDataFrame(self): 
-        expected = 54 
-        actual = median_degree.IntersectDataFrame(self.d,0)
+        expected = 321
+        t = self.d['created_time'][500]
+        actual = median_degree.IntersectDataFrame(self.d,t)
         self.assertEqual(0,norm(expected-len(actual)))
      
 
     def test_MedianDegree(self):
         d = median_degree.parse('venmo-trans-test.txt')
         expected = 1.0 
-        actual = median_degree.MedianDegree(d,0)
+        actual = median_degree.MedianDegree(d)
         self.assertEqual(expected,actual)
 
     def test_RollingMedianDegree(self): 
-        pass 
+        d = median_degree.parse('venmo-trans-test.txt')
+        expected = 1.0
+        actual = median_degree.MedianDegree(self.d)
+ 
