@@ -53,7 +53,7 @@ def main():
     f = open('output.txt','w')
     for item in RollingMedianDegree(parse(source)):
         item = format(item, '.2f')
-        f.write(str(item) + '/n') 
+        f.write(str(item)) 
     f.close()
 if __name__ == "__main__":
     main()
