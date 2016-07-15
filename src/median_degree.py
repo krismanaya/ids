@@ -50,10 +50,10 @@ def main():
     output = sys.argv[2]
     # print source,output 
     # print RollingMedianDegree(parse(source)) 
-    f = open('output.txt','w')
+    f = open('output.txt', 'w')
     for item in RollingMedianDegree(parse(source)):
         item = format(item, '.2f')
-        f.write(str(item)) 
+        f.write(str(item) + '\n') 
     f.close()
 if __name__ == "__main__":
     main()
