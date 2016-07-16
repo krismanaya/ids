@@ -5,7 +5,6 @@ import networkx as nx
 import numpy as np
 import sys
 
-
 #Parse Data
 def parse(filename):
     filename = os.path.abspath(filename)
@@ -13,7 +12,6 @@ def parse(filename):
     m = []
     for line in f: 
         m.append(json.loads(line))
-
     d = pd.DataFrame(m)
     d['created_time'] = pd.to_datetime(d['created_time'])
     current_max = d['created_time'].min()
@@ -23,7 +21,6 @@ def parse(filename):
         if current_max - d['created_time'][k] > pd.Timedelta(minutes = 1): 
             stale.append(k)
     return d.drop(stale)
-
 
 #Intersect DataFrame
 def IntersectDataFrame(d,t): 
@@ -47,11 +44,10 @@ def RollingMedianDegree(d):
         md.append(m)
     return md  
 
+#write an output 
 def main():
     source = sys.argv[1]
     output = sys.argv[2]
-    # print source,output 
-    # print RollingMedianDegree(parse(source)) 
     f = open(output, 'w')
     for item in RollingMedianDegree(parse(source)):
         item = format(item, '.2f')
@@ -59,4 +55,3 @@ def main():
     f.close()
 if __name__ == "__main__":
     main()
-
